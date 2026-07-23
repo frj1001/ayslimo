@@ -1,0 +1,155 @@
+/* =========================================================================
+   ANIMATIONS
+   Subtle, premium motion. All scroll-reveal effects are opt-in via the
+   [data-reveal] attribute and are triggered by js/app.js using
+   IntersectionObserver. Everything here respects prefers-reduced-motion
+   through the global rule declared in style.css.
+   ========================================================================= */
+
+/* ---------------------------------------------------------------------- */
+/* Scroll reveal base states                                              */
+/* ---------------------------------------------------------------------- */
+
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out-soft), transform 0.8s var(--ease-out-soft);
+  will-change: opacity, transform;
+}
+
+[data-reveal="up"]    { transform: translateY(32px); }
+[data-reveal="down"]  { transform: translateY(-32px); }
+[data-reveal="left"]  { transform: translateX(32px); }
+[data-reveal="right"] { transform: translateX(-32px); }
+[data-reveal="zoom"]  { transform: scale(0.94); }
+[data-reveal="fade"]  { transform: none; }
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger children of a revealed group via inline --delay set in JS,
+   falling back to a default. */
+[data-reveal] {
+  transition-delay: var(--delay, 0ms);
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Keyframes                                                              */
+/* ---------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes drawLine {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: translate(-50%, -46%) scale(0.97); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Applied motion                                                         */
+/* ---------------------------------------------------------------------- */
+
+.hero__content > * {
+  animation: heroRise 0.9s var(--ease-out-soft) both;
+}
+
+.hero__content .eyebrow      { animation-delay: 0.05s; }
+.hero__content .hero__title  { animation-delay: 0.15s; }
+.hero__content .hero__subtitle { animation-delay: 0.28s; }
+.hero__content .hero__actions  { animation-delay: 0.4s; }
+.hero__content .hero__stats    { animation-delay: 0.52s; }
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__scroll-cue {
+  animation: floatY 2.6s var(--ease-standard) infinite;
+}
+
+.brand__mark {
+  transition: transform var(--dur-base) var(--ease-standard);
+}
+
+.brand:hover .brand__mark {
+  transform: rotate(20deg);
+}
+
+/* Skeleton shimmer while an image lazy-loads, applied via JS class */
+.img-skeleton {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--color-border-light) 0%, #f0efe9 50%, var(--color-border-light) 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+/* Loading spinner (used sparingly, e.g. contact form submit state) */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+/* Accordion panel expand handled with max-height transition in style.css;
+   this adds a gentle content fade once open. */
+.accordion-item.is-open .accordion-panel__inner {
+  animation: fadeIn 0.4s var(--ease-standard) both;
+}
+
+/* Modal entrance micro-pop, layered on top of the opacity/transform
+   transition already defined on .modal */
+.modal.is-open {
+  animation: modalPop 0.32s var(--ease-out-soft);
+}
+
+/* Filter bar active underline sweep */
+.filter-btn.is-active {
+  animation: fadeIn 0.3s var(--ease-standard);
+}
+
+/* Car card image gentle zoom is defined in style.css (:hover), this adds
+   an entrance for the whole card grid on filter change */
+.car-grid.is-filtering .car-card {
+  animation: fadeIn 0.35s var(--ease-standard) both;
+}
+
+/* Gold underline draw for section eyebrows when revealed */
+[data-reveal].is-visible .eyebrow::before {
+  animation: drawLine 0.6s var(--ease-out-soft) 0.2s both;
+}
+
+/* Testimonial slide fade paired with the transform-based slider in
+   navigation JS */
+.testimonial-slide {
+  transition: opacity var(--dur-base) var(--ease-standard);
+}

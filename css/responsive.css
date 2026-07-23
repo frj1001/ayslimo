@@ -1,0 +1,359 @@
+/* =========================================================================
+   RESPONSIVE
+   Mobile-first overrides layered on top of style.css's desktop-default
+   layout. Breakpoints: 1200 (large desktop tighten), 992 (tablet landscape/
+   nav collapse), 768 (tablet portrait/mobile), 480 (small phones).
+   ========================================================================= */
+
+/* ---------------------------------------------------------------------- */
+/* ≤ 1200px — Large tablet / small laptop                                 */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .car-grid,
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    gap: var(--space-2xl);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: 420px;
+  }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* ≤ 992px — Tablet / nav collapses to hamburger                          */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  :root {
+    --header-height: 76px;
+    --header-height-scrolled: 68px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(340px, 84vw);
+    background: var(--color-navy);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    transform: translateX(100%);
+    transition: transform var(--dur-base) var(--ease-out-soft);
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+  }
+
+  .nav-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border-dark);
+  }
+
+  .nav-menu .nav-item .nav-dropdown {
+  position: static;
+  left: auto;
+  right: auto;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  transition: max-height var(--dur-base) var(--ease-standard);
+}
+
+.nav-menu .nav-item.is-open .nav-dropdown {
+  max-height: 400px;
+  padding: 0.4rem;
+  margin-top: 0.4rem;
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.nav-menu .nav-item.has-dropdown:hover .nav-dropdown {
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+  .nav-phone {
+    display: none;
+  }
+
+  .nav-actions .btn-gold {
+    padding: 0.7rem 1.3rem;
+    font-size: var(--fs-xs);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__badge {
+    right: var(--space-md);
+  }
+
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__stats {
+    gap: var(--space-lg);
+  }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* ≤ 768px — Mobile                                                       */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --space-4xl: 4.5rem;
+    --space-3xl: 3.5rem;
+    --space-2xl: 2.75rem;
+  }
+
+  h1 { font-size: var(--fs-3xl); }
+  h2 { font-size: var(--fs-2xl); }
+
+  .car-grid,
+  .service-grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .brand-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter-bar {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  }
+
+.filter-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.5rem 1.1rem;
+  font-size: var(--fs-xs);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .car-modal__specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .car-modal__features {
+    grid-template-columns: 1fr;
+  }
+
+  .car-modal__body,
+  .car-modal__footer {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .car-modal__footer {
+    flex-direction: column;
+  }
+
+  .modal {
+    max-height: 92vh;
+    width: min(560px, 94vw);
+  }
+
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+
+  .floating-stack {
+    right: var(--space-md);
+    bottom: var(--space-md);
+  }
+
+  .fab {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* ≤ 480px — Small phones                                                 */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 1.1rem;
+  }
+
+  .navbar {
+    gap: var(--space-sm);
+  }
+
+  .brand__text {
+    max-width: 150px;
+  }
+
+  .brand {
+    font-size: var(--fs-md);
+  }
+
+  .brand__tagline {
+    display: none;
+  }
+
+  /* Header stays logo + hamburger only below this width — the CTA button
+     text ("Book Now") would otherwise force the row wider than the
+     viewport and push the hamburger off-screen. Booking is still one tap
+     away via the hero, car cards, and floating WhatsApp button. */
+  .nav-actions .btn-gold {
+    display: none;
+  }
+
+  .hero__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-sm);
+  }
+
+  .hero__stats {
+    gap: var(--space-md);
+  }
+
+  .hero__stat-value {
+    font-size: var(--fs-lg);
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__badge {
+    position: static;
+    margin-top: var(--space-md);
+    display: inline-block;
+  }
+
+  .brand-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .car-card__footer {
+    flex-direction: column;
+  }
+
+
+  .section {
+    padding-block: var(--space-2xl);
+  }
+
+  .contact-form-panel {
+    padding: var(--space-lg);
+  }
+
+  /* Floating action buttons: sit further in from the edge and shrink
+     slightly so they can never clip off-screen on narrow devices. */
+  .floating-stack {
+    right: var(--space-sm);
+    bottom: var(--space-sm);
+  }
+
+  .fab {
+    width: 48px;
+    height: 48px;
+  }
+
+  .fab-top {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Short viewports — keep modals usable on landscape phones                */
+/* ---------------------------------------------------------------------- */
+@media (max-height: 620px) {
+  .modal {
+    top: var(--space-md);
+    transform: translate(-50%, 0);
+    max-height: calc(100vh - 2 * var(--space-md));
+  }
+
+  .modal.is-open {
+    transform: translate(-50%, 0);
+  }
+}

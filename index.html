@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ays Limousine | Chauffeur Service Worldwide</title>
+  <meta name="description" content="Prestige Motors offers premium self-drive and chauffeured car rentals — economy, sedan, SUV, and luxury vehicles for airport transfers, weddings, corporate travel, and monthly rentals." />
+  <meta name="keywords" content="car rental, luxury car rental, limousine service, chauffeur, airport transfer, wedding car rental, corporate car rental" />
+  <meta name="author" content="Prestige Motors" />
+  <link rel="canonical" href="https://www.prestigemotors.example/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ays Limousine | Chauffeur Service Worldwide" />
+  <meta property="og:description" content="Premium self-drive and chauffeured car rentals for every occasion — economy to luxury." />
+  <meta property="og:image" content="images/hero-bg.svg" />
+  <meta property="og:url" content="https://www.prestigemotors.example/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prestige Motors | Luxury Car & Limousine Rental" />
+  <meta name="twitter:description" content="Premium self-drive and chauffeured car rentals for every occasion — economy to luxury." />
+
+  <link rel="icon" type="image/svg+xml" href="images/icons/ayslogo2.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRental",
+    "name": "Prestige Motors",
+    "image": "images/hero-bg.svg",
+    "telephone": "+1-555-123-4567",
+    "email": "reservations@prestigemotors.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1420 Sunset Boulevard",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "postalCode": "90026",
+      "addressCountry": "US"
+    },
+    "openingHours": ["Mo-Fr 08:00-21:00", "Sa-Su 09:00-23:00"],
+    "priceRange": "$$-$$$"
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar">
+      <a href="#home" class="brand" aria-label="Prestige Motors home">
+        <span class="brand__text">
+          <img src="images/icons/ayslogo3.png" alt="Prestige Motors" class="brand__logo-img" height="70" width="120" />
+        </span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary">
+        <div class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="#about" class="nav-link">About Us</a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#cars" class="nav-link" aria-haspopup="true">
+            Cars <span class="nav-link__caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#cars" class="nav-dropdown__link js-nav-filter" data-filter="economy">Economy Cars</a>
+            <a href="#cars" class="nav-dropdown__link js-nav-filter" data-filter="sedan">Sedans</a>
+            <a href="#cars" class="nav-dropdown__link js-nav-filter" data-filter="suv">SUVs</a>
+            <a href="#cars" class="nav-dropdown__link js-nav-filter" data-filter="luxury">Luxury Cars</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#services" class="nav-link" aria-haspopup="true">
+            Services <span class="nav-link__caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#service-self-drive" class="nav-dropdown__link">Self Drive</a>
+            <a href="#service-with-driver" class="nav-dropdown__link">With Driver</a>
+            <a href="#service-wedding" class="nav-dropdown__link">Wedding Cars</a>
+            <a href="#service-airport" class="nav-dropdown__link">Airport Transfer</a>
+            <a href="#service-corporate" class="nav-dropdown__link">Corporate Rental</a>
+            <a href="#service-monthly" class="nav-dropdown__link">Monthly Rental</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="#brands" class="nav-link" aria-haspopup="true">
+            Brands <span class="nav-link__caret" aria-hidden="true">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#brands" class="nav-dropdown__link">Toyota</a>
+            <a href="#brands" class="nav-dropdown__link">Honda</a>
+            <a href="#brands" class="nav-dropdown__link">BMW</a>
+            <a href="#brands" class="nav-dropdown__link">Mercedes</a>
+            <a href="#brands" class="nav-dropdown__link">Audi</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="#faq" class="nav-link">FAQs</a>
+        </div>
+        <div class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+15551234567" class="nav-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+          +923001234567
+        </a>
+        <button type="button" class="btn btn-gold js-book-now">Book Now</button>
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1764605206511-7a649d9df63b?auto=format&fit=crop&w=1920&q=70" alt="" />
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <span class="eyebrow">Chauffeured &amp; Self-Drive Excellence</span>
+        <h1 class="hero__title">Arrive Like It <em>Matters</em></h1>
+        <p class="hero__subtitle">
+          From executive sedans to chauffeured limousines, Prestige Motors delivers
+          immaculate vehicles and white-glove service for every journey — airport
+          transfers, weddings, corporate travel, and beyond.
+        </p>
+        <div class="hero__actions">
+          <button type="button" class="btn btn-gold js-book-now">Reserve Your Vehicle</button>
+          <a href="#cars" class="btn btn-outline">Explore Fleet</a>
+        </div>
+        <div class="hero__stats">
+          <div>
+            <div class="hero__stat-value">12+</div>
+            <div class="hero__stat-label">Years of Excellence</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">40+</div>
+            <div class="hero__stat-label">Vehicles in Fleet</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">8,500+</div>
+            <div class="hero__stat-label">Happy Clients</div>
+          </div>
+          <div>
+            <div class="hero__stat-value">4.9/5</div>
+            <div class="hero__stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__media" data-reveal="left">
+          <img src="https://images.unsplash.com/photo-1620064856565-b5efac6e14ca?auto=format&fit=crop&w=900&q=70" alt="Prestige Motors chauffeur standing beside a luxury vehicle" loading="lazy" width="900" height="1000" />
+          <div class="about__badge">
+            <div class="about__badge-value">12+</div>
+            <div class="about__badge-label">Years of Excellence</div>
+          </div>
+        </div>
+
+        <div data-reveal="right">
+          <span class="eyebrow">Who We Are</span>
+          <h2 class="mt-sm">Two Decades of Driving Distinction</h2>
+          <p class="mt-sm">
+            Prestige Motors was founded on a simple belief: the vehicle you arrive in
+            should say as much as the destination itself. Today we maintain a
+            meticulously curated fleet of economy, sedan, SUV, and luxury vehicles,
+            paired with a team of vetted professional chauffeurs who understand that
+            discretion, punctuality, and polish are non-negotiable.
+          </p>
+
+          <ul class="about__list">
+            <li class="about__list-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              Meticulously maintained, late-model fleet
+            </li>
+            <li class="about__list-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              Vetted, professionally trained chauffeurs
+            </li>
+            <li class="about__list-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              Transparent pricing with zero hidden fees
+            </li>
+            <li class="about__list-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+              24/7 concierge support on WhatsApp and phone
+            </li>
+          </ul>
+
+          <div class="about__stats">
+            <div>
+              <div class="about__stat-value">40+</div>
+              <div class="about__stat-label">Vehicles</div>
+            </div>
+            <div>
+              <div class="about__stat-value">8,500+</div>
+              <div class="about__stat-label">Clients Served</div>
+            </div>
+            <div>
+              <div class="about__stat-value">6</div>
+              <div class="about__stat-label">Cities Covered</div>
+            </div>
+            <div>
+              <div class="about__stat-value">4.9/5</div>
+              <div class="about__stat-label">Client Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CARS ==================== -->
+    <section class="section" id="cars" style="background:var(--color-off-white);">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Our Fleet</span>
+          <h2>Featured Vehicles</h2>
+          <p>Every vehicle is inspected, detailed, and fueled before it reaches you — choose the class that fits your journey.</p>
+        </div>
+
+        <div class="filter-bar" id="carFilterBar" role="tablist" aria-label="Filter cars by category">
+          <button type="button" class="filter-btn is-active" data-filter="all">All Cars</button>
+          <button type="button" class="filter-btn" data-filter="economy">Economy Cars</button>
+          <button type="button" class="filter-btn" data-filter="sedan">Sedans</button>
+          <button type="button" class="filter-btn" data-filter="suv">SUVs</button>
+          <button type="button" class="filter-btn" data-filter="luxury">Luxury Cars</button>
+        </div>
+
+        <div class="car-grid" id="carGrid" aria-live="polite">
+          <!-- Populated by js/cars.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="section section--dark on-dark" id="services">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">What We Offer</span>
+          <h2>Services Tailored To Your Journey</h2>
+          <p>Whether you're behind the wheel or being driven, we've built a service for every occasion.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card glass-panel" id="service-self-drive" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </div>
+            <h3 class="service-card__title">Self Drive</h3>
+            <p class="service-card__desc">Take full control with our self-drive fleet — flexible daily and weekly rates, no chauffeur required.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+
+          <div class="service-card glass-panel" id="service-with-driver" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            </div>
+            <h3 class="service-card__title">With Driver</h3>
+            <p class="service-card__desc">Sit back with a professionally trained chauffeur handling every mile, door to door.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+
+          <div class="service-card glass-panel" id="service-wedding" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8.5" cy="12" r="4"/><circle cx="15.5" cy="12" r="4"/></svg>
+            </div>
+            <h3 class="service-card__title">Wedding Cars</h3>
+            <p class="service-card__desc">Decorated luxury vehicles and punctual chauffeurs to make your wedding-day arrival unforgettable.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+
+          <div class="service-card glass-panel" id="service-airport" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 16l20-6-3 8-6 2-2 4-2-6-7-2z"/></svg>
+            </div>
+            <h3 class="service-card__title">Airport Transfer</h3>
+            <p class="service-card__desc">Flight-tracked pickups and drop-offs across all terminals, available around the clock.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+
+          <div class="service-card glass-panel" id="service-corporate" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </div>
+            <h3 class="service-card__title">Corporate Rental</h3>
+            <p class="service-card__desc">Executive travel accounts with monthly invoicing, priority booking, and dedicated support.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+
+          <div class="service-card glass-panel" id="service-monthly" data-reveal="up">
+            <div class="service-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+            </div>
+            <h3 class="service-card__title">Monthly Rental</h3>
+            <p class="service-card__desc">Long-term rates for extended stays or relocations, with maintenance included.</p>
+            <a href="#contact" class="service-card__link">Enquire Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRANDS ==================== -->
+    <section class="section section--tight" id="brands">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Trusted Fleet Partners</span>
+          <h2>Brands We Carry</h2>
+        </div>
+
+        <div class="brand-strip">
+          <div class="brand-tile js-brand-filter" data-brand="Toyota" role="button" tabindex="0" aria-label="View Toyota vehicles" data-reveal="up"><img src="images/brands/toyota.svg" alt="Toyota" loading="lazy" width="200" height="90" /></div>
+          <div class="brand-tile js-brand-filter" data-brand="Honda" role="button" tabindex="0" aria-label="View Honda vehicles" data-reveal="up"><img src="images/brands/honda.svg" alt="Honda" loading="lazy" width="200" height="90" /></div>
+          <div class="brand-tile js-brand-filter" data-brand="BMW" role="button" tabindex="0" aria-label="View BMW vehicles" data-reveal="up"><img src="images/brands/bmw.svg" alt="BMW" loading="lazy" width="200" height="90" /></div>
+          <div class="brand-tile js-brand-filter" data-brand="Mercedes" role="button" tabindex="0" aria-label="View Mercedes vehicles" data-reveal="up"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz" loading="lazy" width="200" height="90" /></div>
+          <div class="brand-tile js-brand-filter" data-brand="Audi" role="button" tabindex="0" aria-label="View Audi vehicles" data-reveal="up"><img src="images/brands/audi.svg" alt="Audi" loading="lazy" width="200" height="90" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section section--dark on-dark" id="testimonials">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Client Stories</span>
+          <h2>What Our Clients Say</h2>
+        </div>
+
+        <div class="testimonial-slider">
+          <div class="testimonial-track" id="testimonialTrack"></div>
+        </div>
+
+        <div class="testimonial-nav">
+          <button type="button" class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <div class="testimonial-dots" id="testimonialDots"></div>
+          <button type="button" class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Need To Know</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion"></div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section section--charcoal on-dark" id="contact">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Let's Plan Your Next Ride</h2>
+          <p>Reach out on WhatsApp for the fastest response, or use the form and we'll get back to you shortly.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div data-reveal="left">
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+                </span>
+                <div>
+                  <div class="contact-info-item__label">Phone</div>
+                  <div class="contact-info-item__value">+923454655024</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+                </span>
+                <div>
+                  <div class="contact-info-item__label">Email</div>
+                  <div class="contact-info-item__value">reservations@ayslimousine.pk</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                </span>
+                <div>
+                  <div class="contact-info-item__label">Business Hours</div>
+                  <div class="contact-info-item__value">Mon–Fri 8AM–9PM &middot; Airport 24/7</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="contact-info-item__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                </span>
+                <div>
+                  <div class="contact-info-item__label">Address</div>
+                  <div class="contact-info-item__value">123 Main Boulevard, Gulberg III, Lahore, Punjab, Pakistan</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://wa.me/15551234567?text=Hello%20Prestige%20Motors%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="btn btn-gold">WhatsApp Us</a>
+              <a href="tel:+15551234567" class="btn btn-outline">Call Now</a>
+            </div>
+
+            <div class="contact-map mt-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.5!2d-118.26!3d34.098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA1JzUyLjkiTiAxMTjCsDE1JzQzLjMiVw!5e0!3m2!1sen!2sus!4v1700000000000"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Prestige Motors location map"
+                aria-label="Map showing Prestige Motors location"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="contact-form-panel glass-panel" data-reveal="right">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm" novalidate class="mt-lg">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Full Name</label>
+                <input class="form-control" type="text" id="contactName" name="contactName" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input class="form-control" type="email" id="contactEmail" name="contactEmail" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Message</label>
+                <textarea class="form-control" id="contactMessage" name="contactMessage" placeholder="Tell us about your trip..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold btn-block">Send Message</button>
+              <p class="form-status" id="contactFormStatus" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand" aria-label="Prestige Motors home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8l1.5 5"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4z"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg>
+          </span>
+          <span class="brand__text"><span class="brand__name">Ays Limousine</span></span>
+        </a>
+        <p class="footer-brand__desc">Premium self-drive and chauffeured car rentals across Lahore — economy to luxury, for every occasion.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5A1.5 1.5 0 0 1 14.5 6H17V2h-2.5A5.5 5.5 0 0 0 9 7.5V10H6v4h3v8z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="Twitter / X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3.5l-7.6 8.7L23 22h-6.6l-5.2-6.8L5 22H1.5l8.1-9.3L1 2h6.8l4.7 6.2z"/></svg></a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4 0 4.75 2.6 4.75 6.1V21h-4v-5.6c0-1.3 0-3-1.85-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#cars">Our Fleet</a>
+          <a href="#brands">Brands</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <div class="footer-links">
+          <a href="#service-self-drive">Self Drive</a>
+          <a href="#service-with-driver">With Driver</a>
+          <a href="#service-wedding">Wedding Cars</a>
+          <a href="#service-airport">Airport Transfer</a>
+          <a href="#service-corporate">Corporate Rental</a>
+          <a href="#service-monthly">Monthly Rental</a>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4 class="footer-heading">Stay Updated</h4>
+        <p>Subscribe for fleet updates and seasonal offers.</p>
+        <form id="newsletterForm" class="footer-newsletter-form">
+          <input type="email" placeholder="Your email address" required aria-label="Email address" />
+          <button type="submit" class="btn btn-gold btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>&copy; <span id="currentYear"></span> Ays Limousine. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING BUTTONS ==================== -->
+  <div class="floating-stack">
+    <a
+      href="https://wa.me/15551234567?text=Hello%20Prestige%20Motors%2C%20I%27d%20like%20to%20get%20in%20touch."
+      target="_blank"
+      rel="noopener"
+      class="fab fab-whatsapp"
+      aria-label="Chat with us on WhatsApp"
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.6 14.3c-.2.6-1.4 1.2-1.9 1.2-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+    </a>
+    <button type="button" class="fab fab-top" id="backToTopBtn" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- ==================== MODALS ==================== -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- Car Details Modal -->
+  <div class="modal car-modal" id="carDetailsModal" role="dialog" aria-modal="true" aria-labelledby="carModalName">
+    <button type="button" class="modal__close" data-modal-close aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="car-modal__gallery">
+      <div class="car-modal__gallery-main">
+        <img id="carModalMainImg" src="" alt="" data-autofocus />
+      </div>
+      <div class="car-modal__gallery-thumbs" id="carModalThumbs"></div>
+    </div>
+
+    <div class="car-modal__body">
+      <div class="car-modal__header">
+        <div>
+          <span class="badge badge-navy" id="carModalCategory"></span>
+          <h2 id="carModalName" class="mt-sm">Car Name</h2>
+          <div class="rating mt-sm" id="carModalRating"></div>
+        </div>
+        <div class="car-modal__price" id="carModalPrice"></div>
+      </div>
+
+      <div class="car-modal__specs" id="carModalSpecs"></div>
+
+      <div class="car-modal__section">
+        <h4>Features</h4>
+        <div class="car-modal__features" id="carModalFeatures"></div>
+      </div>
+
+      <div class="car-modal__section">
+        <h4>Rental Policy</h4>
+        <p class="car-modal__policy" id="carModalPolicy"></p>
+      </div>
+
+      <div class="car-modal__footer">
+        <a href="tel:+15551234567" class="btn btn-outline-dark">Call to Reserve</a>
+        <button type="button" class="btn btn-gold js-book-now" id="carModalBookBtn">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div class="modal modal--sm booking-modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <button type="button" class="modal__close" data-modal-close aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="booking-modal__header">
+      <h2 id="bookingModalTitle" data-autofocus>Reserve Your Vehicle</h2>
+      <p style="color:var(--color-text-muted-dark); font-size:var(--fs-sm); margin-top:0.4rem;">
+        Fill in your trip details — we'll open WhatsApp with everything pre-filled to confirm instantly.
+      </p>
+      <div class="booking-modal__car-preview" id="bookingCarPreview"></div>
+    </div>
+
+    <form id="bookingForm" class="booking-modal__form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="bookingName">Full Name</label>
+          <input class="form-control" type="text" id="bookingName" name="bookingName" placeholder="John Doe" required />
+          <span class="form-error">Please enter your name.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="bookingPhone">Phone Number</label>
+          <input class="form-control" type="tel" id="bookingPhone" name="bookingPhone" placeholder="+1 555 123 4567" required />
+          <span class="form-error">Please enter a valid phone number.</span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="bookingPickupDate">Pickup Date</label>
+          <input class="form-control" type="date" id="bookingPickupDate" name="bookingPickupDate" required />
+          <span class="form-error">Please select a pickup date.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="bookingReturnDate">Return Date</label>
+          <input class="form-control" type="date" id="bookingReturnDate" name="bookingReturnDate" required />
+          <span class="form-error">Return date must be after pickup.</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bookingPickupLocation">Pickup Location</label>
+        <input class="form-control" type="text" id="bookingPickupLocation" name="bookingPickupLocation" placeholder="e.g. LAX Airport, Terminal 4" required />
+        <span class="form-error">Please enter a pickup location.</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bookingDriver">Driver Required?</label>
+        <select class="form-control form-control--select" id="bookingDriver" name="bookingDriver" required>
+          <option value="No">No — Self Drive</option>
+          <option value="Yes">Yes — With Chauffeur</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="bookingNotes">Additional Notes (optional)</label>
+        <textarea class="form-control" id="bookingNotes" name="bookingNotes" placeholder="Flight number, child seat, special requests..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-gold btn-block">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.6 14.3c-.2.6-1.4 1.2-1.9 1.2-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.3.1.2.1.9-.1 1.5z"/></svg>
+        Send Booking via WhatsApp
+      </button>
+    </form>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/config.js"></script>
+  <script src="js/cars.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
