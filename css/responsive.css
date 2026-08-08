@@ -38,6 +38,8 @@
     --header-height-scrolled: 68px;
   }
 
+  
+
   .hamburger {
     display: flex;
   }
@@ -141,6 +143,26 @@
   .hero__stats {
     gap: var(--space-lg);
   }
+
+  .hero__layout {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.hero__subtitle {
+  margin-inline: auto;
+}
+
+.hero__actions,
+.hero__stats {
+  justify-content: center;
+}
+
+.hero__media {
+  order: -1;
+  max-width: 360px;
+  margin-inline: auto;
+}
 }
 
 
@@ -296,6 +318,11 @@
   .hero__stat-value {
     font-size: var(--fs-lg);
   }
+
+  .hero .eyebrow {
+    white-space: normal;
+    line-height: 1.3;
+}
 
   .about__stats {
     grid-template-columns: 1fr 1fr;
