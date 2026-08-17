@@ -163,6 +163,10 @@
   max-width: 360px;
   margin-inline: auto;
 }
+
+.route-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 
@@ -349,6 +353,10 @@
 
   .contact-form-panel {
     padding: var(--space-lg);
+  }
+
+  .route-grid {
+  grid-template-columns: 1fr;
   }
 
   /* Floating action buttons: sit further in from the edge and shrink

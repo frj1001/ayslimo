@@ -53,6 +53,29 @@ const TESTIMONIALS = [
   },
 ];
 
+const INTERCITY_ROUTES = [
+  { to: "Islamabad", price: 28000 },
+  { to: "Gujranwala", price: 27000 },
+  { to: "Sialkot", price: 16000 },
+  { to: "Faisalabad", price: 18000 },
+  { to: "Rahim Yar Khan", price: 42000 },
+  { to: "Mian Channu", price: 22000 },
+  { to: "Hafizabad", price: 12500 },
+  { to: "Arifwala", price: 19500 },
+  { to: "Sahiwal", price: 15000 },
+  { to: "Okara", price: 13500 },
+  { to: "Vehari", price: 22500 },
+  { to: "Shakargarh", price: 13500 },
+  { to: "Chakwal", price: 22500 },
+  { to: "Bhera", price: 18500 },
+  { to: "Bahawalpur", price: 20000 },
+  { to: "Peshawar", price: 39000 },
+  { to: "Kharian", price: 18000 },
+  { to: "Mardan", price: 33000 },
+  { to: "Jhelum", price: 16000 },
+  { to: "Abbottabad", price: 38000 },
+];
+
 const FAQS = [
   {
     q: "What documents do I need to rent a car?",
@@ -258,6 +281,29 @@ function initStatCounters() {
     startAutoplay();
   }
 
+/* --------------------------------- Intercity Routes ----------------------------------- */  
+  function initIntercityRoutes() {
+  const grid = document.getElementById("routeGrid");
+  if (!grid) return;
+
+  grid.innerHTML = INTERCITY_ROUTES.map(
+    (route) => `
+    <div class="route-card surface-card" data-reveal="up">
+      <div class="route-card__cities">
+        <span>Lahore</span>
+        <span class="route-card__arrow">→</span>
+        <span>${route.to}</span>
+      </div>
+      <div class="route-card__price">${SITE_CONFIG.currency}${route.price.toLocaleString()}</div>
+      <button type="button" class="btn btn-outline-dark btn-sm btn-block js-book-route" data-city="${route.to}" data-price="${route.price}">
+        Book This Route
+      </button>
+    </div>`
+  ).join("");
+
+  observeReveals(grid);
+}
+
   /* --------------------------------- FAQ ----------------------------------- */
 
   function initFaq() {
@@ -380,6 +426,7 @@ function initStatCounters() {
   function init() {
     initTestimonials();
     initFaq();
+    initIntercityRoutes();
     initContactForm();
     initFooterYear();
     initNewsletterForm();

@@ -57,6 +57,20 @@ const BookingModule = (() => {
     ModalModule.openModal(document.getElementById("bookingModal"));
   }
 
+  function openRouteBooking(city, price) {
+  selectedCarId = null;
+  const preview = document.getElementById("bookingCarPreview");
+  preview.innerHTML = `<span><strong>Lahore → ${city}</strong> — Fixed one-way rate: ${SITE_CONFIG.currency}${Number(price).toLocaleString()}</span>`;
+
+  document.getElementById("bookingForm").reset();
+  document.getElementById("bookingPickupLocation").value = "Lahore";
+  document.getElementById("bookingNotes").value = `One-way drop-off to ${city} (fixed rate ${SITE_CONFIG.currency}${Number(price).toLocaleString()})`;
+  setMinDates();
+
+  document.querySelectorAll(".modal.is-open").forEach((m) => m.classList.remove("is-open"));
+  ModalModule.openModal(document.getElementById("bookingModal"));
+}
+
   function validateForm(form) {
     let valid = true;
     const requiredFields = form.querySelectorAll("[required]");
@@ -148,6 +162,13 @@ const BookingModule = (() => {
       const bookBtn = e.target.closest(".js-book-now");
       if (bookBtn) {
         openBooking(bookBtn.dataset.carId || null);
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      const routeBtn = e.target.closest(".js-book-route");
+      if (routeBtn) {
+        openRouteBooking(routeBtn.dataset.city, routeBtn.dataset.price);
       }
     });
 

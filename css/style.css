@@ -1252,6 +1252,39 @@ textarea.form-control {
   transform: translateX(4px);
 }
 
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.route-card {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.route-card__cities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.route-card__arrow {
+  color: var(--color-gold-dark);
+}
+
+.route-card__price {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--color-gold-dark);
+  margin-top: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
 
 /* ---------------------------------------------------------------------- */
 /* 14. SECTION: BRANDS                                                    */
@@ -1285,7 +1318,7 @@ textarea.form-control {
 }
 
 .brand-tile img {
-  max-height: 40px;
+  max-height: 48px;
   width: auto;
 }
 
