@@ -28,6 +28,36 @@ const BookingModule = (() => {
     });
   }
 
+  function initLocationButton() {
+  const btn = document.getElementById("useLocationBtn");
+  const status = document.getElementById("locationStatus");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      status.textContent = "Location access isn't supported on this device/browser.";
+      return;
+    }
+
+    status.textContent = "Getting your location...";
+    btn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        document.getElementById("bookingLat").value = position.coords.latitude.toFixed(6);
+        document.getElementById("bookingLng").value = position.coords.longitude.toFixed(6);
+        status.textContent = "✓ Location captured — a map link will be shared with your driver.";
+        btn.disabled = false;
+      },
+      () => {
+        status.textContent = "Couldn't get your location. Please allow location access, or type your address manually.";
+        btn.disabled = false;
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  });
+}
+
   function fillCarPreview(carId) {
     const preview = document.getElementById("bookingCarPreview");
     const car = carId ? CarsModule.getCarById(carId) : null;
@@ -45,9 +75,23 @@ const BookingModule = (() => {
     `;
   }
 
+  function renderBankDetails() {
+  const el = document.getElementById("bookingBankDetails");
+  if (!el) return;
+  const b = SITE_CONFIG.bankDetails;
+
+  el.innerHTML = `
+    <div class="booking-modal__bank-row"><span>Bank</span><strong>${b.bankName}</strong></div>
+    <div class="booking-modal__bank-row"><span>Account Title</span><strong>${b.accountTitle}</strong></div>
+    <div class="booking-modal__bank-row"><span>Account Number</span><strong>${b.accountNumber}</strong></div>
+    <div class="booking-modal__bank-row"><span>IBAN</span><strong>${b.iban}</strong></div>
+  `;
+  }
+
   function openBooking(carId = null) {
     selectedCarId = carId;
     fillCarPreview(carId);
+    renderBankDetails();   // added
     document.getElementById("bookingForm").reset();
     setMinDates();
 
@@ -65,6 +109,7 @@ const BookingModule = (() => {
   document.getElementById("bookingForm").reset();
   document.getElementById("bookingPickupLocation").value = "Lahore";
   document.getElementById("bookingNotes").value = `One-way drop-off to ${city} (fixed rate ${SITE_CONFIG.currency}${Number(price).toLocaleString()})`;
+  renderBankDetails();   // added
   setMinDates();
 
   document.querySelectorAll(".modal.is-open").forEach((m) => m.classList.remove("is-open"));
@@ -103,28 +148,33 @@ const BookingModule = (() => {
   }
 
   function buildWhatsAppMessage(data) {
-    const car = selectedCarId ? CarsModule.getCarById(selectedCarId) : null;
+  const car = selectedCarId ? CarsModule.getCarById(selectedCarId) : null;
 
-    const lines = [
-      SITE_CONFIG.whatsappGreeting,
-      "",
-      "*Booking Request*",
-      car ? `Vehicle: ${car.name} (${SITE_CONFIG.currency}${car.price.toLocaleString()}/day)` : "Vehicle: Not specified",
-      `Name: ${data.name}`,
-      `Phone: ${data.phone}`,
-      `Pickup Date: ${data.pickupDate}`,
-      `Return Date: ${data.returnDate}`,
-      `Pickup Location: ${data.pickupLocation}`,
-      `Driver Required: ${data.driverRequired}`,
-    ];
+  const lines = [
+    SITE_CONFIG.whatsappGreeting,
+    "",
+    "*Booking Request*",
+    car ? `Vehicle: ${car.name} (${SITE_CONFIG.currency}${car.price.toLocaleString()}/day)` : "Vehicle: Not specified",
+    `Name: ${data.name}`,
+    `Phone: ${data.phone}`,
+    `Pickup Date: ${data.pickupDate}`,
+    `Return Date: ${data.returnDate}`,
+    `Pickup Location: ${data.pickupLocation}`,
+  ];
 
-    if (data.notes) {
-      lines.push(`Notes: ${data.notes}`);
-    }
-
-    return lines.join("\n");
+  if (data.lat && data.lng) {
+    lines.push(`Map Pin: https://www.google.com/maps?q=${data.lat},${data.lng}`);
   }
 
+  lines.push(`Driver Required: ${data.driverRequired}`);
+
+  if (data.notes) {
+    lines.push(`Notes: ${data.notes}`);
+  }
+
+  return lines.join("\n");
+}
+  
   function sendToWhatsApp(message) {
     const encoded = encodeURIComponent(message);
     const url = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encoded}`;
@@ -144,6 +194,8 @@ const BookingModule = (() => {
       pickupLocation: form.bookingPickupLocation.value.trim(),
       driverRequired: form.bookingDriver.value,
       notes: form.bookingNotes.value.trim(),
+      lat: form.bookingLat.value,   // added
+      lng: form.bookingLng.value,   // added
     };
 
     const message = buildWhatsAppMessage(data);
@@ -152,9 +204,12 @@ const BookingModule = (() => {
     ModalModule.closeModal();
   }
 
+
   function init() {
     const form = document.getElementById("bookingForm");
     if (form) form.addEventListener("submit", handleSubmit);
+
+    initLocationButton();   // added
 
     // Open booking modal from any "Book Now" trigger (car cards, car
     // details modal footer, hero CTA, services, etc.)

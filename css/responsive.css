@@ -22,10 +22,6 @@
     grid-template-columns: 1.2fr 1fr 1fr;
   }
 
-  .footer-newsletter {
-    grid-column: 1 / -1;
-    max-width: 420px;
-  }
 }
 
 
@@ -196,10 +192,6 @@
     gap: var(--space-xl);
   }
 
-  .footer-newsletter {
-    grid-column: 1 / -1;
-    max-width: none;
-  }
 
   .footer-bottom {
     flex-direction: column;

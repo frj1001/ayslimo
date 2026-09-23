@@ -404,24 +404,6 @@ function initStatCounters() {
     if (el) el.textContent = new Date().getFullYear();
   }
 
-  function initNewsletterForm() {
-    const form = document.getElementById("newsletterForm");
-    if (!form) return;
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const input = form.querySelector("input[type='email']");
-      if (!input.value.trim()) return;
-      const btn = form.querySelector("button");
-      const original = btn.textContent;
-      btn.textContent = "Subscribed ✓";
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.disabled = false;
-        form.reset();
-      }, 2500);
-    });
-  }
 
   function init() {
     initTestimonials();
@@ -429,7 +411,6 @@ function initStatCounters() {
     initIntercityRoutes();
     initContactForm();
     initFooterYear();
-    initNewsletterForm();
     initStatCounters();
     observeReveals();
     observeLazyImages();

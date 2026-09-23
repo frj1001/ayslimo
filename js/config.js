@@ -9,18 +9,27 @@
 
 const SITE_CONFIG = {
   // Business identity
-  businessName: "Prestige Motors",
+  businessName: "Ays Car Rental",
   tagline: "Luxury Car & Limousine Rental",
 
   // IMPORTANT: WhatsApp number in international format, digits only,
   // no "+", no spaces, no dashes. Example: 15551234567 (US), 923001234567 (PK)
-  whatsappNumber: "923001234567",
+  whatsappNumber: "923454655024",
 
   // Contact details
-  phone: "+92 300 1234567",
-  phoneHref: "tel:+923001234567",
+  phone: "+92 345 4655024",
+  phoneHref: "tel:+923454655024",
   email: "reservations@ayslimousine.pk",
-  address: "123 Main Boulevard, Gulberg III, Lahore, Punjab, Pakistan",
+  address: "14 B Commercial Fifth Floor Bahria Orchard Raiwand Road Lahore",
+
+  // Bank details for advance payment via transfer — included automatically
+  // in the WhatsApp message once a booking is submitted (see booking.js)
+  bankDetails: {
+    bankName: "AlBaraka Bank",
+    accountTitle: "Ays Car Rental",
+    accountNumber: "0102724379012",
+    iban: "PK18AIIN0000102724379012",
+  },
 
   // Business hours (displayed in the Contact section)
   businessHours: [
@@ -45,7 +54,7 @@ const SITE_CONFIG = {
   currency: "Rs. ",
 
   // Default WhatsApp greeting inserted above generated booking messages
-  whatsappGreeting: "Hello Prestige Motors! I'd like to make a booking.",
+  whatsappGreeting: "Hello Ays Car Rental! I'd like to make a booking.",
 };
 
 // Freeze to avoid accidental mutation elsewhere in the app
