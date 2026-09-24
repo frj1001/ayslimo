@@ -9,40 +9,33 @@
 
 const TESTIMONIALS = [
   {
-    quote: "Booked a BMW 7 Series for our anniversary weekend and the car was immaculate. The chauffeur was on time to the minute and the whole process from WhatsApp booking to pickup took minutes.",
-    name: "Sarah Mitchell",
-    role: "Repeat Customer, Los Angeles",
+    quote: "Booked a Audi A6 for our anniversary weekend and the car was immaculate. The chauffeur was on time to the minute and the whole process from WhatsApp booking to pickup took minutes.",
+    name: "Tehmina Iqbal",
+    role: "Repeat Customer, Lahore",
     rating: 5,
     avatar: "images/testimonials/sarah.svg",
   },
   {
     quote: "Used their airport transfer for a red-eye landing at 4am. Driver was already waiting with a sign, car was spotless, and pricing was exactly what was quoted on WhatsApp. No surprises.",
-    name: "James Whitfield",
+    name: "Waqas Ikram",
     role: "Corporate Client",
     rating: 5,
     avatar: "images/testimonials/james.svg",
     initials: "JW",
   },
   {
-    quote: "Rented the Mercedes S-Class for our wedding and it made every photo look like it belonged in a magazine. Prestige Motors decorated the car exactly how we asked. Worth every penny.",
-    name: "Amara Okafor",
+    quote: "Rented the Audi A6 for our wedding and it made every photo look like it belonged in a magazine. Ays Car Rental decorated the car exactly how we asked. Worth every penny.",
+    name: "Amara Khan",
     role: "Wedding Client",
     rating: 5,
     avatar: "images/testimonials/amara.svg",
   },
   {
     quote: "Needed a self-drive economy car for two weeks while my own was in the shop. Transparent pricing, no hidden fees at return, and the Yaris was fuel efficient exactly as advertised.",
-    name: "Daniel Kim",
+    name: "Danyal Sheikh",
     role: "Self-Drive Rental",
     rating: 4,
     avatar: "images/testimonials/daniel.svg",
-  },
-  {
-    quote: "Our company now runs all executive airport pickups through Prestige Motors. Monthly invoicing is simple, drivers are professional, and the fleet is always late-model.",
-    name: "Lena Fischer",
-    role: "Operations Manager, Fischer & Co.",
-    rating: 5,
-    avatar: "images/testimonials/lena.svg",
   },
   {
     quote: "Land Cruiser was perfect for a family road trip up the coast. Roomy, comfortable, and the team even adjusted our return time when our flight changed, no extra charge.",

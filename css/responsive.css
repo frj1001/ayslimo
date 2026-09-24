@@ -367,6 +367,36 @@
     width: 40px;
     height: 40px;
   }
+
+  /* Booking modal: give more breathing room on very narrow screens, and
+   let long content wrap instead of forcing the modal wider than the
+   viewport. */
+  .booking-modal__form,
+  .booking-modal__header {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  /* Bank details: IBAN/account numbers are long, fixed strings that don't
+    naturally break — force them to wrap onto their own line under the
+    label instead of pushing past the row's width. */
+  .booking-modal__bank-row {
+    flex-wrap: wrap;
+  }
+
+  .booking-modal__bank-row strong {
+    width: 100%;
+    text-align: left;
+    word-break: break-all;
+  }
+
+  /* The WhatsApp submit button's icon + long label ("Send Booking via
+    WhatsApp") don't fit on one line at 360px — .btn normally forces
+    nowrap, so override it here specifically for this button. */
+  #bookingForm button[type="submit"] {
+    white-space: normal;
+    line-height: 1.3;
+  }
 }
 
 

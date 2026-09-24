@@ -14,12 +14,12 @@ const SITE_CONFIG = {
 
   // IMPORTANT: WhatsApp number in international format, digits only,
   // no "+", no spaces, no dashes. Example: 15551234567 (US), 923001234567 (PK)
-  whatsappNumber: "923454655024",
+  whatsappNumber: "923214002484",
 
   // Contact details
-  phone: "+92 345 4655024",
-  phoneHref: "tel:+923454655024",
-  email: "reservations@ayslimousine.pk",
+  phone: "+92 321 4002484",
+  phoneHref: "tel:+923214002484",
+  email: "bilal@ayscarrentallahore.pk",
   address: "14 B Commercial Fifth Floor Bahria Orchard Raiwand Road Lahore",
 
   // Bank details for advance payment via transfer — included automatically
@@ -33,8 +33,7 @@ const SITE_CONFIG = {
 
   // Business hours (displayed in the Contact section)
   businessHours: [
-    { days: "Monday – Friday", hours: "8:00 AM – 9:00 PM" },
-    { days: "Saturday – Sunday", hours: "9:00 AM – 11:00 PM" },
+    { days: "Monday – Sunday", hours: "24/7" },
     { days: "Airport Pickups", hours: "24/7" },
   ],
 
